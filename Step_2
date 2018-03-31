@@ -1,0 +1,12 @@
+## Sort data based on rsquared adjusted then save the dataframe
+
+import pandas as pd
+
+rsq_val = pd.read_csv("filepath")
+
+def sort(df):
+  for i in df:
+      df = df.sort_values('r_sq', ascending = False)
+      df = df.head(n = 1000)
+      return df
+      
